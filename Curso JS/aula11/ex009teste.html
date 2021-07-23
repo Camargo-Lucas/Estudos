@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de idade</title>
+    <style>
+        body {
+            background:rgba(15, 166, 172, 0.562)
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifique se você possui a idade mínima para dirigir</h1>
+    Digite sua idade: <input type="number" name="txtidade" id="txtidade">
+    <input type="button" value='Enviar' onclick='verificar()'>
+    <div id='res'>
+        
+    </div>
+
+    <script>
+        function verificar(){
+            var i = window.document.querySelector('input#txtidade')
+            var age = Number(i.value)
+            if (age >= 18){
+                res.innerHTML = `<p>Você possui idade suficiente para tirar a habilitação</p>`
+            } else{
+                res.innerHTML = `<p>Você precisa de ao menos <strong>18 anos</strong> para tirar a habilitação</P>`
+            }
+        }
+    </script>
+</body>
+</html>
